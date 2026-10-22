@@ -7,31 +7,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Alif</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#Home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Menu">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#About">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Contact">Contact</a>
-        </li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
 
-      </ul>
-    </div>
-</nav>
-  </div>
+            <a class="navbar-brand fw-bold" href="#home">
+               Alif 
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Buka navigasi">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     <header id="home">
 
         <div id="carouselProfile"
@@ -65,20 +82,20 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img src="img/foto1.jpeg"
+                    <img src="img/k1.jpg"
                          class="d-block w-100"
                          alt="Belajar teknologi">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="img/foto2.jpeg"
+                    <img src="img/k2.jpg"
                          class="d-block w-100"
                          alt="Pemrograman komputer">
 
                 </div>
 
                 <div class="carousel-item">
-                    <img src="img/foto3.jpeg"
+                    <img src="img/k3.jpg"
                          class="d-block w-100"
                          alt="Kerja sama tim">
                 </div>
@@ -112,6 +129,54 @@
         </div>
 
     </header>
+       <section id="about" class="container py-5">
+
+        <div class="row align-items-center g-4">
+
+            <!-- TEKS KIRI DI LAPTOP, ATAS DI MOBILE -->
+            <div class="col-12 col-md-6 order-1">
+
+                <h2 class="text-primary fw-bold">
+                    Tentang Saya
+                </h2>
+
+                <p>
+                    Halo! Nama saya Rezvan Alif Arziki. Saya adalah siswa
+                    jurusan Rekayasa Perangkat Lunak (RPL)
+                    yang tertarik mempelajari pemrograman,
+                    pembuatan website, dan teknologi informasi.
+                </p>
+
+                <p>
+                    Website ini dibuat untuk memperkenalkan
+                    diri dan menampilkan materi pembelajaran
+                    kompetensi keahlian RPL.
+                </p>
+
+                <p>
+                    Saya ingin terus mengembangkan kemampuan
+                    dalam membuat website dan aplikasi yang
+                    bermanfaat.
+                </p>
+
+                <a href="#kontak" class="btn btn-primary">
+                    Hubungi Saya
+                </a>
+
+            </div>
+
+            <!-- GAMBAR KANAN DI LAPTOP, BAWAH DI MOBILE -->
+            <div class="col-12 col-md-6 order-2 text-center">
+
+                <img src="img/foto2.jpeg"
+                     class="img-fluid rounded"
+                     alt="Foto profil pribadi">
+
+            </div>
+
+        </div>
+
+    </section>
     <main>
 <div class="card-group bg-primary-subtle mt-5">
         <div class="card bg-primary-subtle" style="width: 18rem;">

@@ -374,6 +374,213 @@
         </div>
 
     </main>
+        <section id="kontak" class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <h2 class="text-primary fw-bold text-center mb-4">
+                            Hubungi Saya
+                        </h2>
+
+                        <form id="contactForm">
+
+                            <!-- Input Nama -->
+                            <div class="mb-3">
+
+                                <label for="nama" class="form-label">
+                                    Nama Lengkap
+                                </label>
+
+                                <input type="text"
+                                       class="form-control"
+                                       id="nama"
+                                       name="nama"
+                                       placeholder="Masukkan nama Anda"
+                                       required>
+
+                            </div>
+
+                            <!-- Input Email -->
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    Email
+                                </label>
+
+                                <input type="email"
+                                       class="form-control"
+                                       id="email"
+                                       name="email"
+                                       placeholder="nama@email.com"
+                                       required>
+
+                            </div>
+
+                            <!-- Input Pesan -->
+                            <div class="mb-3">
+
+                                <label for="pesan" class="form-label">
+                                    Pesan
+                                </label>
+
+                                <textarea class="form-control"
+                                          id="pesan"
+                                          name="pesan"
+                                          rows="4"
+                                          placeholder="Tuliskan pesan Anda"
+                                          required></textarea>
+
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-primary w-100">
+                                Kirim Pesan
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- MODAL KONFIRMASI -->
+    <div class="modal fade"
+         id="successModal"
+         tabindex="-1"
+         aria-labelledby="successModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header bg-success text-white">
+
+                    <h5 class="modal-title" id="successModalLabel">
+                        Berhasil!
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Tutup"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p id="successMessage" class="mb-0">
+                        Formulir berhasil dikirim.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                            class="btn btn-success"
+                            data-bs-dismiss="modal">
+                        Oke
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+
+        <div class="container">
+
+            <h5 class="fw-bold">Alif</h5>
+
+            <p class="mb-1">SMK Negeri 9 Medan</p>
+
+            <p class="mb-3">
+                Kelas XI RPL 3 | Rekayasa Perangkat Lunak
+            </p>
+
+            <p>
+                Media Sosial:
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="link-info text-decoration-none">
+                    Instagram
+                </a>
+                |
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="link-info text-decoration-none">
+                    Facebook
+                </a>
+                |
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="link-info text-decoration-none">
+                    YouTube
+                </a>
+            </p>
+
+            <hr>
+
+            <p class="mb-0">
+                &copy; 2026 Alif. Hak Cipta Dilindungi.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JAVASCRIPT UNTUK FORM DAN MODAL -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+
+        const successModal = new bootstrap.Modal(
+            document.getElementById("successModal")
+        );
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nama = document.getElementById("nama").value;
+
+            successMessage.textContent =
+                "Terima kasih, " + nama +
+                "! Formulir berhasil dikirim.";
+
+            successModal.show();
+
+            contactForm.reset();
+
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
